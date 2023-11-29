@@ -2,8 +2,9 @@ package pasetobackend
 
 import (
 	"fmt"
-	"github.com/whatsauth/watoken"
 	"testing"
+
+	"github.com/whatsauth/watoken"
 )
 
 var privatekey = "privatekey"
@@ -45,7 +46,7 @@ func TestHashFunc(t *testing.T) {
 }
 
 func TestTokenEncoder(t *testing.T) {
-	conn := MongoCreateConnection("MONGOSTR", "PAKARBIapp")
+	conn := MongoCreateConnection("MONGOSTRING", "PAKARBIapp")
 	privateKey, publicKey := watoken.GenerateKey()
 	userdata := new(User)
 	userdata.Username = "pakarbi"
