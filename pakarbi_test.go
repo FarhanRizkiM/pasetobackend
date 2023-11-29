@@ -69,7 +69,7 @@ func TestInsertUserdata(t *testing.T) {
 	conn := MongoCreateConnection("MONGOSTRING", "PAKARBIapp")
 	password, err := HashPass("rizkitest")
 	fmt.Println("err", err)
-	data := InsertUserdata(conn, "rizki", "role", password)
+	data := InsertUserdata(conn, "rizki", "user", password)
 	fmt.Println(data)
 }
 
