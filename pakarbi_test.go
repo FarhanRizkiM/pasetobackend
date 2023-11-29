@@ -89,8 +89,8 @@ func TestCompareUsername(t *testing.T) {
 
 func TestEncodeWithRole(t *testing.T) {
 	privateKey, publicKey := watoken.GenerateKey()
-	role := "admin"
-	username := "adminpakarbi"
+	role := "user"
+	username := "rizki"
 	encoder, err := EncodeWithRole(role, username, privateKey)
 
 	fmt.Println(" error :", err)
